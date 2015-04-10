@@ -1,5 +1,5 @@
 class Game < ActiveRecord::Base
-
+  serialize :board
 
   def initialize
     super
@@ -10,3 +10,4 @@ class Game < ActiveRecord::Base
 
 
 end
+
