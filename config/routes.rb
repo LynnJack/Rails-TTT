@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
     root 'pages#index'
-    resources :games, only:[:new]
+    resources :games, only:[:new, :show]
+
+    get 'games/:id/update', to: 'games#update_board', as: 'update_board'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
