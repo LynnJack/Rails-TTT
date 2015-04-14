@@ -13,11 +13,10 @@ class GamesController < ApplicationController
     b = params[:column].to_i
     if @game.counter.even? && !@game.board[a][b]
       @game.board[a][b] = 'O'
-      @game.counter +=1
     elsif !@game.board[a][b]
       @game.board[a][b] = 'X'
-      @game.counter +=1
     end
+    @game.counter +=1
     @game.save
     redirect_to game_path(@game)
   end
