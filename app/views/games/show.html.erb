@@ -1,17 +1,24 @@
 <table>
     <tr>
-        <td><%= link_to "Place your marker", update_board_path(:row => 0, :column =>0)%></td>
-        <td><%= link_to "Place your marker", update_board_path(:row => 0, :column =>1) %></td>
-        <td><%= link_to "Place your marker", update_board_path(:row => 0, :column =>2) %></td>
+        <td><%= @game.board[0][0] %><%= link_to "Place your marker", update_board_path(:row => 0, :column => 0) unless @game.board[0][0] || @winner %></td>
+        <td><%= @game.board[0][1] %><%= link_to "Place your marker", update_board_path(:row => 0, :column => 1) unless @game.board[0][1] || @winner %></td>
+        <td><%= @game.board[0][2] %><%= link_to "Place your marker", update_board_path(:row => 0, :column => 2) unless @game.board[0][2] || @winner %></td>
     </tr>
     <tr>
-        <td><%= link_to "Place your marker", update_board_path(:row => 1, :column =>0) %></td>
-        <td><%= link_to "Place your marker", update_board_path(:row => 1, :column =>1) %></td>
-        <td><%= link_to "Place your marker", update_board_path(:row => 1, :column =>2) %></td>
+        <td><%= @game.board[1][0] %><%= link_to "Place your marker", update_board_path(:row => 1, :column => 0) unless @game.board[1][0] || @winner %></td>
+        <td><%= @game.board[1][1] %><%= link_to "Place your marker", update_board_path(:row => 1, :column => 1) unless @game.board[1][1] || @winner %></td>
+        <td><%= @game.board[1][2] %><%= link_to "Place your marker", update_board_path(:row => 1, :column => 2) unless @game.board[1][2] || @winner %></td>
     </tr>
     <tr>
-        <td><%= link_to "Place your marker", update_board_path(:row => 2, :column =>0) %></td>
-        <td><%= link_to "Place your marker", update_board_path(:row => 2, :column =>1) %></td>
-        <td><%= link_to "Place your marker", update_board_path(:row => 2, :column =>2) %></td>
+        <td><%= @game.board[2][0] %><%= link_to "Place your marker", update_board_path(:row => 2, :column => 0) unless @game.board[2][0] || @winner %></td>
+        <td><%= @game.board[2][1] %><%= link_to "Place your marker", update_board_path(:row => 2, :column => 1) unless @game.board[2][1] || @winner %></td>
+        <td><%= @game.board[2][2] %><%= link_to "Place your marker", update_board_path(:row => 2, :column => 2) unless @game.board[2][2] || @winner %></td>
     </tr>
 </table>
+
+<%= @winning_statement %>
+
+
+
+
+
