@@ -1,3 +1,5 @@
+<!-- xo -->
+<!-- xxoo -->
 <table>
     <tr>
         <td><%= @game.board[0][0] %><%= link_to "Place your marker", update_board_path(:row => 0, :column => 0) unless @game.board[0][0] || @winner %></td>
